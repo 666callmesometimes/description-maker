@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    color: #2e2b38;
+    background-color: #fafafa;
+
+}
+.section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+.form-container {
+    margin-bottom: 30px;
+}
+.generated-code {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 60rem;
+    height: 32rem;
+}
+button {
+    margin-top: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.customDescription-col-5-6 {
+    margin-left: 1.25rem;
+}
+.customDescription-wrapper-opisy {
+    border: 1px solid #dfdfdf;
+    width: 70%;
+    padding: 3rem;
+}
+section {
+    display: flex;
+}
+h2, h3 {
+    color: rgb(49 29 55);
+}
+
+h3 {
+    font-weight: 200;
+    font-size: 1.75rem;
+}
+input {
+    font-family: 'Segoe UI', sans-serif;
+}
+textarea {
+    font-family: 'Space Mono', Courier, monospace;
+    font-style: italic;
+}
