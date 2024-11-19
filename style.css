@@ -89,3 +89,16 @@ textarea {
   min-height: 30px; /* Początkowa wysokość */
   font-family: "Segoe UI", sans-serif;
 }/*# sourceMappingURL=style.css.map */
+
+button {
+    margin: 0;
+	padding: .5rem .75rem;
+	max-width: 100%;
+	border: 0;
+	border-radius: .25rem;
+	font: inherit;
+	line-height: 1.125;
+	cursor: pointer;
+    background-color: #121212;
+    color: white;
+  }
