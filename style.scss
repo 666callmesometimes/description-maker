@@ -25,7 +25,10 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     width: 60rem;
-    height: 32rem;
+    height: 36rem;
+    font-family: 'Space Mono', Courier, monospace;
+    font-style: italic;
+    overflow: auto;
 }
 button {
     margin-top: 10px;
@@ -42,6 +45,9 @@ button {
 section {
     display: flex;
 }
+h1 {
+    font-family: 'Space Mono', Courier, monospace;
+}
 h2, h3 {
     color: rgb(49 29 55);
 }
@@ -53,7 +59,20 @@ h3 {
 input {
     font-family: 'Segoe UI', sans-serif;
 }
-textarea {
-    font-family: 'Space Mono', Courier, monospace;
-    font-style: italic;
+input {
+    width: auto; /* Domyślne zachowanie */
+    min-width: 50px; /* Minimalna szerokość */
+    max-width: 100%; /* Maksymalna szerokość */
+    border: 1px solid #ccc;
+    padding: 5px;
 }
+textarea {
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none; /* Wyłączamy możliwość manualnej zmiany */
+    overflow: hidden; /* Ukrywa przewijanie */
+    min-height: 30px; /* Początkowa wysokość */
+    font-family: 'Segoe UI', sans-serif;
+        }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap");
 body {
   font-family: "Segoe UI", sans-serif;
@@ -28,7 +29,10 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   width: 60rem;
-  height: 32rem;
+  height: 36rem;
+  font-family: "Space Mono", Courier, monospace;
+  font-style: italic;
+  overflow: auto;
 }
 
 button {
@@ -50,6 +54,10 @@ section {
   display: flex;
 }
 
+h1 {
+  font-family: "Space Mono", Courier, monospace;
+}
+
 h2, h3 {
   color: rgb(49, 29, 55);
 }
@@ -63,7 +71,21 @@ input {
   font-family: "Segoe UI", sans-serif;
 }
 
+input {
+  width: auto; /* Domyślne zachowanie */
+  min-width: 50px; /* Minimalna szerokość */
+  max-width: 100%; /* Maksymalna szerokość */
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
 textarea {
-  font-family: "Space Mono", Courier, monospace;
-  font-style: italic;
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  resize: none; /* Wyłączamy możliwość manualnej zmiany */
+  overflow: hidden; /* Ukrywa przewijanie */
+  min-height: 30px; /* Początkowa wysokość */
+  font-family: "Segoe UI", sans-serif;
 }/*# sourceMappingURL=style.css.map */
