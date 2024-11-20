@@ -91,3 +91,19 @@ button {
   .icon-holder {
     width: 2rem;
   }
+  .icon-picker {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.icon-picker input[type="text"] {
+    font-size: 14px;
+}
+
+.icon-picker img {
+    transition: transform 0.2s ease;
+}
+
+.icon-picker img:hover {
+    transform: scale(1.1);
+}

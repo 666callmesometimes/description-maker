@@ -6,35 +6,120 @@ const addSectionButton = document.getElementById('add-section');
 // Lista ikon z nazwami i ścieżkami do miniatur
 const iconsList = [
     { name: "check", path: "https://vobis.pl/Shared/Icon/check.png" },
-    { name: "bezpieczenstwo", path: "https://vobis.pl/Shared/Icon/bezpieczenstwo.png" },
     { name: "4k", path: "https://vobis.pl/Shared/Icon/4k.png" },
+    { name: "4khdr01", path: "https://vobis.pl/Shared/Icon/4khdr01.png" },
     { name: "5g", path: "https://vobis.pl/Shared/Icon/5g.png" },
-    { name: "camera", path: "https://vobis.pl/Shared/Icon/camera.png" },
+    { name: "allinone", path: "https://vobis.pl/Shared/Icon/allinone.png" },
+    { name: "anc", path: "https://vobis.pl/Shared/Icon/anc.png" },
+    { name: "androidtv", path: "https://vobis.pl/Shared/Icon/androidtv.png" },
     { name: "battery", path: "https://vobis.pl/Shared/Icon/battery.png" },
+    { name: "bezpieczenstwo", path: "https://vobis.pl/Shared/Icon/bezpieczenstwo.png" },
+    { name: "broken_phone", path: "https://vobis.pl/Shared/Icon/broken_phone.png" },
     { name: "bulb", path: "https://vobis.pl/Shared/Icon/bulb.png" },
+    { name: "camera", path: "https://vobis.pl/Shared/Icon/camera.png" },
     { name: "chlodne_powietrze", path: "https://vobis.pl/Shared/Icon/chlodne_powietrze.png" },
     { name: "chromecast", path: "https://vobis.pl/Shared/Icon/chromecast.png" },
     { name: "colors", path: "https://vobis.pl/Shared/Icon/colors.png" },
     { name: "cpu", path: "https://vobis.pl/Shared/Icon/cpu.png" },
+    { name: "dolbyatmos", path: "https://vobis.pl/Shared/Icon/dolbyatmos.png" },
+    { name: "dolbyaudio", path: "https://vobis.pl/Shared/Icon/dolbyaudio.png" },
+    { name: "dolbycinema", path: "https://vobis.pl/Shared/Icon/dolbycinema.png" },
+    { name: "dolby-vision", path: "https://vobis.pl/Shared/Icon/dolby-vision.png" },
+    { name: "eco", path: "https://vobis.pl/Shared/Icon/eco.png" },
     { name: "eye", path: "https://vobis.pl/Shared/Icon/eye.png" },
     { name: "finger", path: "https://vobis.pl/Shared/Icon/finger.png" },
-    { name: "eco", path: "https://vobis.pl/Shared/Icon/eco.png" },
-    { name: "glosnik", path: "https://vobis.pl/Shared/Icon/glosnik.png" },
     { name: "full_hd", path: "https://vobis.pl/Shared/Icon/full_hd.png" },
+    { name: "gaming", path: "https://vobis.pl/Shared/Icon/gaming.png" },
+    { name: "glosnik", path: "https://vobis.pl/Shared/Icon/glosnik.png" },
+    { name: "hdd", path: "https://vobis.pl/Shared/Icon/hdd.png" },
+    { name: "hdr", path: "https://vobis.pl/Shared/Icon/hdr.png" },
+    { name: "hifi", path: "https://vobis.pl/Shared/Icon/hifi.png" },
+    { name: "homecinema", path: "https://vobis.pl/Shared/Icon/homecinema.png" },
+    { name: "homecinema01", path: "https://vobis.pl/Shared/Icon/homecinema01.png" },
+    { name: "icon_2w1", path: "https://vobis.pl/Shared/Icon/icon_2w1.png" },
+    { name: "icon_4g_lte", path: "https://vobis.pl/Shared/Icon/icon_4g_lte.png" },
+    { name: "icon_4k_full_hd", path: "https://vobis.pl/Shared/Icon/icon_4k_full_hd.png" },
+    { name: "icon_android", path: "https://vobis.pl/Shared/Icon/icon_android.png" },
     { name: "icon_bluetooth", path: "https://vobis.pl/Shared/Icon/icon_bluetooth.png" },
+    { name: "icon_camera", path: "https://vobis.pl/Shared/Icon/icon_camera.png" },
+    { name: "icon_card_memory", path: "https://vobis.pl/Shared/Icon/icon_card_memory.png" },
+    { name: "icon_ddr3", path: "https://vobis.pl/Shared/Icon/icon_ddr3.png" },
+    { name: "icon_ddr4", path: "https://vobis.pl/Shared/Icon/icon_ddr4.png" },
+    { name: "icon_display_led", path: "https://vobis.pl/Shared/Icon/icon_display_led.png" },
+    { name: "icon_dual_sim", path: "https://vobis.pl/Shared/Icon/icon_dual_sim.png" },
+    { name: "icon_gps", path: "https://vobis.pl/Shared/Icon/icon_gps.png" },
+    { name: "icon_graphic_card", path: "https://vobis.pl/Shared/Icon/icon_graphic_card.png" },
+    { name: "icon_hdd_photo", path: "https://vobis.pl/Shared/Icon/icon_hdd_photo.png" },
+    { name: "icon_hdmi", path: "https://vobis.pl/Shared/Icon/icon_hdmi.png" },
+    { name: "icon_keyboard", path: "https://vobis.pl/Shared/Icon/icon_keyboard.png" },
+    { name: "icon_nfc", path: "https://vobis.pl/Shared/Icon/icon_nfc.png" },
+    { name: "icon_notebook", path: "https://vobis.pl/Shared/Icon/icon_notebook.png" },
+    { name: "icon_ram", path: "https://vobis.pl/Shared/Icon/icon_ram.png" },
     { name: "icon_touchpad", path: "https://vobis.pl/Shared/Icon/icon_touchpad.png" },
+    { name: "icon_usb3", path: "https://vobis.pl/Shared/Icon/icon_usb3.png" },
+    { name: "ikony-vobis-fun", path: "https://vobis.pl/Shared/Icon/ikony-vobis-fun.png" },
+    { name: "ios", path: "https://vobis.pl/Shared/Icon/ios.png" },
     { name: "jony", path: "https://vobis.pl/Shared/Icon/jony.png" },
     { name: "kontrast", path: "https://vobis.pl/Shared/Icon/kontrast.png" },
+    { name: "lcd", path: "https://vobis.pl/Shared/Icon/lcd.png" },
+    { name: "led", path: "https://vobis.pl/Shared/Icon/led.png" },
     { name: "like", path: "https://vobis.pl/Shared/Icon/like.png" },
-    { name: "phone", path: "https://vobis.pl/Shared/Icon/phone.png" },
-    { name: "sd_card", path: "https://vobis.pl/Shared/Icon/sd_card.png" },
-    { name: "sen", path: "https://vobis.pl/Shared/Icon/sen.png" },
-    { name: "signal", path: "https://vobis.pl/Shared/Icon/signal.png" },
-    { name: "size_icon", path: "https://vobis.pl/Shared/Icon/size_icon.png" },
-    { name: "smartwatch", path: "https://vobis.pl/Shared/Icon/smartwatch.png" },
-    { name: "szeroki_kat", path: "https://vobis.pl/Shared/Icon/szeroki_kat.png" },
-    { name: "tv", path: "https://vobis.pl/Shared/Icon/tv.png" },
-    { name: "water_icon", path: "https://vobis.pl/Shared/Icon/water_icon.png" },
+    { name: "maszynka02", path: "https://vobis.pl/Shared/Icon/maszynka02.png" },
+    { name: "microwave", path: "https://vobis.pl/Shared/Icon/microwave.png" },
+  { name: "mini_pc", path: "https://vobis.pl/Shared/Icon/mini_pc.png" },
+  { name: "mouse", path: "https://vobis.pl/Shared/Icon/mouse.png" },
+  { name: "mute", path: "https://vobis.pl/Shared/Icon/mute.png" },
+  { name: "netflix", path: "https://vobis.pl/Shared/Icon/netflix.png" },
+  { name: "niszczarka", path: "https://vobis.pl/Shared/Icon/niszczarka.png" },
+  { name: "no-frost", path: "https://vobis.pl/Shared/Icon/no-frost.png" },
+  { name: "nosniki", path: "https://vobis.pl/Shared/Icon/nosniki.png" },
+  { name: "old_phone", path: "https://vobis.pl/Shared/Icon/old_phone.png" },
+  { name: "paper_icon_1", path: "https://vobis.pl/Shared/Icon/paper_icon_1.png" },
+  { name: "paper_icon_2", path: "https://vobis.pl/Shared/Icon/paper_icon_2.png" },
+  { name: "phone", path: "https://vobis.pl/Shared/Icon/phone.png" },
+  { name: "phone_2", path: "https://vobis.pl/Shared/Icon/phone_2.png" },
+  { name: "plyta_glowna", path: "https://vobis.pl/Shared/Icon/plyta_glowna.png" },
+  { name: "pokretlo", path: "https://vobis.pl/Shared/Icon/pokretlo.png" },
+  { name: "poweradapter", path: "https://vobis.pl/Shared/Icon/poweradapter.png" },
+  { name: "print_icon", path: "https://vobis.pl/Shared/Icon/print_icon.png" },
+  { name: "printer", path: "https://vobis.pl/Shared/Icon/printer.png" },
+  { name: "procent_icon", path: "https://vobis.pl/Shared/Icon/procent_icon.png" },
+  { name: "remote_control", path: "https://vobis.pl/Shared/Icon/remote_control.png" },
+  { name: "router", path: "https://vobis.pl/Shared/Icon/router.png" },
+  { name: "router1", path: "https://vobis.pl/Shared/Icon/router1.png" },
+  { name: "router2", path: "https://vobis.pl/Shared/Icon/router2.png" },
+  { name: "running", path: "https://vobis.pl/Shared/Icon/running.png" },
+  { name: "scan_icon", path: "https://vobis.pl/Shared/Icon/scan_icon.png" },
+  { name: "sd_card", path: "https://vobis.pl/Shared/Icon/sd_card.png" },
+  { name: "sen", path: "https://vobis.pl/Shared/Icon/sen.png" },
+  { name: "shave21", path: "https://vobis.pl/Shared/Icon/shave21.png" },
+  { name: "shave31", path: "https://vobis.pl/Shared/Icon/shave31.png" },
+  { name: "shave41", path: "https://vobis.pl/Shared/Icon/shave41.png" },
+  { name: "signal", path: "https://vobis.pl/Shared/Icon/signal.png" },
+  { name: "size_icon", path: "https://vobis.pl/Shared/Icon/size_icon.png" },
+  { name: "sluchawki-do-uszne", path: "https://vobis.pl/Shared/Icon/sluchawki-do-uszne.png" },
+  { name: "sluchawki-nauszne", path: "https://vobis.pl/Shared/Icon/sluchawki-nauszne.png" },
+  { name: "smart_tv", path: "https://vobis.pl/Shared/Icon/smart_tv.png" },
+  { name: "smartwatch", path: "https://vobis.pl/Shared/Icon/smartwatch.png" },
+  { name: "sound01", path: "https://vobis.pl/Shared/Icon/sound01.png" },
+  { name: "sound02", path: "https://vobis.pl/Shared/Icon/sound02.png" },
+  { name: "ssd1", path: "https://vobis.pl/Shared/Icon/ssd1.png" },
+  { name: "ssd", path: "https://vobis.pl/Shared/Icon/ssd.png" },
+  { name: "sshd", path: "https://vobis.pl/Shared/Icon/sshd.png" },
+  { name: "stacjonarny", path: "https://vobis.pl/Shared/Icon/stacjonarny.png" },
+  { name: "suszarka", path: "https://vobis.pl/Shared/Icon/suszarka.png" },
+  { name: "szeroki_kat", path: "https://vobis.pl/Shared/Icon/szeroki_kat.png" },
+  { name: "temperatura", path: "https://vobis.pl/Shared/Icon/temperatura.png" },
+  { name: "time_icon", path: "https://vobis.pl/Shared/Icon/time_icon.png" },
+  { name: "touchscreen", path: "https://vobis.pl/Shared/Icon/touchscreen.png" },
+  { name: "tv", path: "https://vobis.pl/Shared/Icon/tv.png" },
+  { name: "usb", path: "https://vobis.pl/Shared/Icon/usb.png" },
+  { name: "vacuum", path: "https://vobis.pl/Shared/Icon/vacuum.png" },
+  { name: "water_icon", path: "https://vobis.pl/Shared/Icon/water_icon.png" },
+  { name: "wifi", path: "https://vobis.pl/Shared/Icon/wifi.png" },
+  { name: "wireless", path: "https://vobis.pl/Shared/Icon/wireless.png" },
+  { name: "wzornictwo", path: "https://vobis.pl/Shared/Icon/wzornictwo.png" },
+  { name: "zlacza", path: "https://vobis.pl/Shared/Icon/zlacza.png" }
 
 ];
 
@@ -145,8 +230,7 @@ function createSection(template = null) {
 let activeIconPicker = null; // Przechowuje aktywny picker
 
 function openIconPicker(iconHolder) {
-    // Sprawdź, czy picker już istnieje
-    if (activeIconPicker) return;
+    if (activeIconPicker) return; // Jeśli picker jest otwarty, nie otwieraj ponownie.
 
     const iconPicker = document.createElement('div');
     iconPicker.className = 'icon-picker';
@@ -154,34 +238,68 @@ function openIconPicker(iconHolder) {
     iconPicker.style.background = '#fff';
     iconPicker.style.border = '1px solid #ccc';
     iconPicker.style.padding = '10px';
-    iconPicker.style.display = 'grid';
-    iconPicker.style.gridTemplateColumns = 'repeat(5, 1fr)'; // 5 kolumn
-    iconPicker.style.gap = '10px';
     iconPicker.style.zIndex = '1000';
+    iconPicker.style.width = '300px'; // Szerokość pickera
+    iconPicker.style.maxHeight = '400px'; // Maksymalna wysokość pickera
+    iconPicker.style.overflowY = 'scroll'; // Scrollbar dla pickera
 
-    iconsList.forEach(icon => {
-        const iconItem = document.createElement('div');
-        iconItem.style.cursor = 'pointer';
-        iconItem.style.display = 'flex';
-        iconItem.style.justifyContent = 'center';
-        iconItem.style.alignItems = 'center';
-        iconItem.innerHTML = `<img src="${icon.path}" alt="${icon.name}" style="width: 50px; height: 50px;">`; // Większe ikony
-        iconItem.onclick = () => {
-            iconHolder.dataset.iconName = icon.name;
-            iconHolder.querySelector('img').src = icon.path;
-            closeIconPicker(); // Zamknij picker po wybraniu ikony
-            updatePreviewAndCode();
-        };
-        iconPicker.appendChild(iconItem);
+    // Pole wyszukiwania
+    const searchBar = document.createElement('input');
+    searchBar.type = 'text';
+    searchBar.placeholder = 'Wyszukaj ikonę...';
+    searchBar.style.width = 'calc(100% - 20px)';
+    searchBar.style.marginBottom = '10px';
+    searchBar.style.padding = '5px';
+    searchBar.style.border = '1px solid #ccc';
+    searchBar.style.borderRadius = '4px';
+    searchBar.style.outline = 'none';
+
+    iconPicker.appendChild(searchBar);
+
+    const iconGrid = document.createElement('div');
+    iconGrid.style.display = 'grid';
+    iconGrid.style.gridTemplateColumns = 'repeat(5, 1fr)';
+    iconGrid.style.gap = '10px';
+    iconPicker.appendChild(iconGrid);
+
+    // Funkcja do renderowania ikon
+    function renderIcons(filter = '') {
+        iconGrid.innerHTML = ''; // Czyszczenie ikon
+        const filteredIcons = iconsList.filter(icon =>
+            icon.name.toLowerCase().includes(filter.toLowerCase())
+        );
+
+        filteredIcons.forEach(icon => {
+            const iconItem = document.createElement('div');
+            iconItem.style.cursor = 'pointer';
+            iconItem.style.display = 'flex';
+            iconItem.style.justifyContent = 'center';
+            iconItem.style.alignItems = 'center';
+            iconItem.innerHTML = `<img src="${icon.path}" alt="${icon.name}" style="width: 50px; height: 50px;">`;
+            iconItem.onclick = () => {
+                iconHolder.dataset.iconName = icon.name;
+                iconHolder.querySelector('img').src = icon.path;
+                closeIconPicker();
+                updatePreviewAndCode();
+            };
+            iconGrid.appendChild(iconItem);
+        });
+    }
+
+    renderIcons(); // Renderowanie ikon początkowo bez filtra
+
+    searchBar.addEventListener('input', () => {
+        renderIcons(searchBar.value); // Aktualizacja ikon na podstawie wyszukiwania
     });
 
     document.body.appendChild(iconPicker);
-    activeIconPicker = iconPicker; // Ustawiamy aktualny picker
+    activeIconPicker = iconPicker;
 
     const rect = iconHolder.getBoundingClientRect();
     iconPicker.style.left = `${rect.left}px`;
     iconPicker.style.top = `${rect.bottom + window.scrollY}px`;
 }
+
 
 function closeIconPicker() {
     if (activeIconPicker) {
