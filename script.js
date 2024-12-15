@@ -172,7 +172,8 @@ function updatePreviewAndCode() {
         const imageAlt = section.querySelector('.image-alt').value;
 
         htmlContent += `
-        <section>
+        <section class="customDescription-clearfix">
+        <p>&nbsp;</p>
         <div class="customDescription-col-1-6"><img alt="ikona" class="customDescription-icon" src="${iconPath}" /></div>
 
 <div class="customDescription-col-5-6">
