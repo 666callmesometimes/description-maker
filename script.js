@@ -119,7 +119,9 @@ const iconsList = [
   { name: "wifi", path: "https://vobis.pl/Shared/Icon/wifi.png" },
   { name: "wireless", path: "https://vobis.pl/Shared/Icon/wireless.png" },
   { name: "wzornictwo", path: "https://vobis.pl/Shared/Icon/wzornictwo.png" },
-  { name: "zlacza", path: "https://vobis.pl/Shared/Icon/zlacza.png" }
+  { name: "zlacza", path: "https://vobis.pl/Shared/Icon/zlacza.png" } ,
+  { name: "Ikony-AI", path: "https://vobis.pl/Shared/Icon/Ikony-AI.png" }
+
 
 ];
 
