@@ -121,7 +121,7 @@ const iconsList = [
   { name: "wzornictwo", path: "https://vobis.pl/Shared/Icon/wzornictwo.png" },
   { name: "zlacza", path: "https://vobis.pl/Shared/Icon/zlacza.png" } ,
   { name: "Butelka do wody", path: "https://vobis.pl/Shared/Icon/Ikony_butelka%20do%20wody.png" } ,
-  { name: "Ikony-AI", path: "https://vobis.pl/Shared/Icon/Ikony_AI.png" }
+  { name: "Ikony-AI", path: "https://vobis.pl/Shared/Icon/Ikony_AI.png" } ,
   { name: "airfryer", path: "https://vobis.pl/Shared/Icon/Ikony_airfryer.png" },
   { name: "blender", path: "https://vobis.pl/Shared/Icon/Ikony_blender.png" },
   { name: "blyskawica", path: "https://vobis.pl/Shared/Icon/Ikony_blyskawica.png" },
