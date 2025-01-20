@@ -215,7 +215,7 @@ function updatePreviewAndCode() {
         htmlContent += `
         <section class="customDescription-clearfix">
         <p>&nbsp;</p>
-        <div class="customDescription-col-1-6"><img alt="ikona" class="customDescription-icon" src="${iconPath}" /></div>
+        <div class="customDescription-col-1-6"><img alt="ikona" class="customDescription-icon" src="https://vobis.pl/Products/Zdj%C4%99cia%20do%20kart/${iconPath}.jpg" /></div>
 
 <div class="customDescription-col-5-6">
 <h3>${headerText}</h3>
