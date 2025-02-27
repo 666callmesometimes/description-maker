@@ -158,7 +158,20 @@ const iconsList = [
   { name: "saturator", path: "https://vobis.pl/Shared/Icon/Ikony_saturator.png" },
   { name: "smartwatch", path: "https://vobis.pl/Shared/Icon/Ikony_smartwatch.png" },
   { name: "SOS", path: "https://vobis.pl/Shared/Icon/Ikony_SOS.png" },
-  { name: "telefon", path: "https://vobis.pl/Shared/Icon/Ikony_telefon.png" }
+  { name: "telefon", path: "https://vobis.pl/Shared/Icon/Ikony_telefon.png" },
+  { name: "odkurzacz_pionowy", path: "https://vobis.pl/Shared/Icon/ikony_odkurzacz_pionowy.png" },
+  { name: "chleb", path: "https://vobis.pl/Shared/Icon/ikony_chleb.png" },
+  { name: "blender_reczny", path: "https://vobis.pl/Shared/Icon/ikony_blender_reczny.png" },
+  { name: "robot_kuchenny", path: "https://vobis.pl/Shared/Icon/ikony_robot_kuchenny.png" },
+  { name: "mieso", path: "https://vobis.pl/Shared/Icon/ikony_mieso.png" },
+  { name: "szklanka", path: "https://vobis.pl/Shared/Icon/ikony_szklanka.png" },
+  { name: "wentylator", path: "https://vobis.pl/Shared/Icon/ikony_wentylator.png" }
+
+
+
+
+
+
 
 
 
