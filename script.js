@@ -86,7 +86,7 @@ const iconsList = [
   { name: "procent_icon", path: "https://vobis.pl/Shared/Icon/procent_icon.png" },
   { name: "remote_control", path: "https://vobis.pl/Shared/Icon/remote_control.png" },
   { name: "router", path: "https://vobis.pl/Shared/Icon/router.png" },
-  { name: "router1", path: "https://vobis.pl/Shared/Icon/router1.png" },
+  { name: "router1", path: "https://vobis.pl/Shared/Icon/Router1.png" },
   { name: "router2", path: "https://vobis.pl/Shared/Icon/router2.png" },
   { name: "running", path: "https://vobis.pl/Shared/Icon/running.png" },
   { name: "scan_icon", path: "https://vobis.pl/Shared/Icon/scan_icon.png" },
