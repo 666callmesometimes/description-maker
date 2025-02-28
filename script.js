@@ -165,7 +165,19 @@ const iconsList = [
   { name: "robot_kuchenny", path: "https://vobis.pl/Shared/Icon/ikony_robot_kuchenny.png" },
   { name: "mieso", path: "https://vobis.pl/Shared/Icon/ikony_mieso.png" },
   { name: "szklanka", path: "https://vobis.pl/Shared/Icon/ikony_szklanka.png" },
-  { name: "wentylator", path: "https://vobis.pl/Shared/Icon/ikony_wentylator.png" }
+  { name: "wentylator", path: "https://vobis.pl/Shared/Icon/ikony_wentylator.png" },
+  { name: "dom", path: "https://vobis.pl/Shared/Icon/Ikony_dom.png" },
+  { name: "mikser", path: "https://vobis.pl/Shared/Icon/Ikony_mikser.png" },
+  { name: "mop", path: "https://vobis.pl/Shared/Icon/Ikony_mop.png" },
+  { name: "owoce", path: "https://vobis.pl/Shared/Icon/Ikony_powerbank.png" },
+  { name: "plecak", path: "https://vobis.pl/Shared/Icon/Ikony_powerbank.png" },
+  { name: "sprzatanie", path: "https://vobis.pl/Shared/Icon/Ikony_powerbank.png" },
+  { name: "szczoteczka_do_zebow", path: "https://vobis.pl/Shared/Icon/Ikony_szczoteczka_do_zebow.png" },
+  { name: "termos", path: "https://vobis.pl/Shared/Icon/Ikony_termos.png" },
+  { name: "torba", path: "https://vobis.pl/Shared/Icon/Ikony_torba.png" },
+  { name: "warzywa", path: "https://vobis.pl/Shared/Icon/Ikony_warzywa.png" },
+  { name: "zelazko", path: "https://vobis.pl/Shared/Icon/Ikony_zelazko.png" },
+
 
 
 
