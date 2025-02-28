@@ -103,7 +103,7 @@ const iconsList = [
   { name: "smartwatch", path: "https://vobis.pl/Shared/Icon/smartwatch.png" },
   { name: "sound01", path: "https://vobis.pl/Shared/Icon/sound01.png" },
   { name: "sound02", path: "https://vobis.pl/Shared/Icon/sound02.png" },
-  { name: "ssd1", path: "https://vobis.pl/Shared/Icon/ssd1.png" },
+  { name: "ssd1", path: "https://vobis.pl/Shared/Icon/ssd(1).png" },
   { name: "ssd", path: "https://vobis.pl/Shared/Icon/ssd.png" },
   { name: "sshd", path: "https://vobis.pl/Shared/Icon/sshd.png" },
   { name: "stacjonarny", path: "https://vobis.pl/Shared/Icon/stacjonarny.png" },
