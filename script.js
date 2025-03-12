@@ -176,17 +176,22 @@ const iconsList = [
   { name: "termos", path: "https://vobis.pl/Shared/Icon/Ikony_termos.png" },
   { name: "torba", path: "https://vobis.pl/Shared/Icon/Ikony_torba.png" },
   { name: "warzywa", path: "https://vobis.pl/Shared/Icon/Ikony_warzywa.png" },
-  { name: "zelazko", path: "https://vobis.pl/Shared/Icon/Ikony_zelazko.png" }
-
-
-
-
-
-
-
-
-
-
+  { name: "zelazko", path: "https://vobis.pl/Shared/Icon/Ikony_zelazko.png" },
+  { name: "airpods", path: "https://vobis.pl/Shared/Icon/Ikony_airpods.png" },
+  { name: "cisnieniomierz", path: "https://vobis.pl/Shared/Icon/Ikony_cinieniomierz.png" },
+  { name: "ekspres do kawy", path: "https://vobis.pl/Shared/Icon/Ikony_ekspres_do_kawy.png" },
+  { name: "filtr", path: "https://vobis.pl/Shared/Icon/Ikony_filtr.png" },
+  { name: "kostki lodu", path: "https://vobis.pl/Shared/Icon/Ikony_kostki_lodu.png" },
+  { name: "lody", path: "https://vobis.pl/Shared/Icon/Ikony_lody.png" },
+  { name: "opiekacz", path: "https://vobis.pl/Shared/Icon/Ikony_opiekacz.png" },
+  { name: "podmuch", path: "https://vobis.pl/Shared/Icon/Ikony_podmuch.png" },
+  { name: "pogoda", path: "https://vobis.pl/Shared/Icon/Ikony_pogoda.png" },
+  { name: "pulsometr", path: "https://vobis.pl/Shared/Icon/Ikony_pulsometr.png" },
+  { name: "ryba", path: "https://vobis.pl/Shared/Icon/Ikony_ryba.png" },
+  { name: "serduszko", path: "https://vobis.pl/Shared/Icon/Ikony_serduszko.png" },
+  { name: "torba na laptopa", path: "https://vobis.pl/Shared/Icon/Ikony_torba_na_laptopa.png" },
+  { name: "ubranie", path: "https://vobis.pl/Shared/Icon/Ikony_ubranie.png" },
+  { name: "ząb", path: "https://vobis.pl/Shared/Icon/Ikony_zab.png" }
 ];
 
 // Dynamiczna zmiana szerokości i wysokości inputów oraz textarea
