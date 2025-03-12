@@ -179,7 +179,7 @@ const iconsList = [
   { name: "zelazko", path: "https://vobis.pl/Shared/Icon/Ikony_zelazko.png" },
   { name: "airpods", path: "https://vobis.pl/Shared/Icon/Ikony_airpods.png" },
   { name: "cisnieniomierz", path: "https://vobis.pl/Shared/Icon/Ikony_cinieniomierz.png" },
-  { name: "ekspres do kawy", path: "https://vobis.pl/Shared/Icon/Ikony_ekspres_do_kawy.png" },
+  { name: "ekspres przelewowy", path: "https://vobis.pl/Shared/Icon/Ikony_ekspres_przelewowy.png" },
   { name: "filtr", path: "https://vobis.pl/Shared/Icon/Ikony_filtr.png" },
   { name: "kostki lodu", path: "https://vobis.pl/Shared/Icon/Ikony_kostki_lodu.png" },
   { name: "lody", path: "https://vobis.pl/Shared/Icon/Ikony_lody.png" },
