@@ -191,7 +191,8 @@ const iconsList = [
   { name: "serduszko", path: "https://vobis.pl/Shared/Icon/Ikony_serduszko.png" },
   { name: "torba na laptopa", path: "https://vobis.pl/Shared/Icon/Ikony_torba_na_laptopa.png" },
   { name: "ubranie", path: "https://vobis.pl/Shared/Icon/Ikony_ubranie.png" },
-  { name: "ząb", path: "https://vobis.pl/Shared/Icon/Ikony_zab.png" }
+  { name: "ząb", path: "https://vobis.pl/Shared/Icon/Ikony_zab.png" },
+  { name: "mikrofon", path: "https://vobis.pl/Shared/Icon/Ikony_mikrofon.png" }
 ];
 
 // Dynamiczna zmiana szerokości i wysokości inputów oraz textarea
