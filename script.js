@@ -356,6 +356,7 @@ function openIconPicker(iconHolder) {
                 iconHolder.querySelector('img').src = icon.path;
                 closeIconPicker();
                 updatePreviewAndCode();
+                saveSessionData();
             };
             iconGrid.appendChild(iconItem);
         });
@@ -424,3 +425,142 @@ document.getElementById('product-name').addEventListener('input', function () {
 
 addSectionButton.addEventListener('click', () => createSection());
 sectionsContainer.addEventListener('input', updatePreviewAndCode);
+
+// Klucz do przechowywania danych sesji
+const SESSION_STORAGE_KEY = 'editorSessionData';
+
+// Funkcja zapisująca aktualny stan do localStorage
+function saveSessionData() {
+  const sessionData = {
+    productName: document.getElementById('product-name').value,
+    sections: []
+  };
+  
+  // Zbierz dane ze wszystkich sekcji
+  const sections = sectionsContainer.querySelectorAll('.section');
+  sections.forEach(section => {
+    sessionData.sections.push({
+      iconName: section.querySelector('.icon-holder').dataset.iconName,
+      headerText: section.querySelector('.header-text').value,
+      sectionText: section.querySelector('.section-text').value,
+      imagePath: section.querySelector('.image-path').value,
+      imageAlt: section.querySelector('.image-alt').value
+    });
+  });
+  
+  // Zapisz dane w localStorage
+  localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(sessionData));
+}
+
+// Funkcja wczytująca dane sesji z localStorage
+function loadSessionData() {
+  const savedData = localStorage.getItem(SESSION_STORAGE_KEY);
+  if (!savedData) return;
+  
+  const sessionData = JSON.parse(savedData);
+  
+  // Ustaw nazwę produktu
+  if (sessionData.productName) {
+    document.getElementById('product-name').value = sessionData.productName;
+    resizeInput(document.getElementById('product-name'));
+  }
+  
+  // Wczytaj sekcje, jeśli istnieją
+  if (sessionData.sections && sessionData.sections.length > 0) {
+    // Wyczyść istniejące sekcje
+    sectionsContainer.innerHTML = '';
+    
+    // Dodaj sekcje z zapisanych danych
+    sessionData.sections.forEach(sectionData => {
+      createSection(sectionData);
+    });
+  }
+  
+  // Zaktualizuj podgląd
+  updatePreviewAndCode();
+}
+
+// Podpięcie funkcji zapisującej do zdarzeń
+function setupAutoSave() {
+  // Zapisz przy każdej zmianie w sekcji
+  sectionsContainer.addEventListener('input', function(e) {
+    saveSessionData();
+  });
+  
+  // Zapisz przy zmianie nazwy produktu
+  document.getElementById('product-name').addEventListener('input', function() {
+    saveSessionData();
+  });
+  
+  // Zapisz po dodaniu, usunięciu lub duplikacji sekcji
+  const originalCreateSection = createSection;
+  createSection = function(template) {
+    originalCreateSection(template);
+    saveSessionData();
+  };
+  
+  const originalRemoveSection = removeSection;
+  removeSection = function(button) {
+    originalRemoveSection(button);
+    saveSessionData();
+  };
+  
+  const originalDuplicateSection = duplicateSection;
+  duplicateSection = function(button) {
+    originalDuplicateSection(button);
+    saveSessionData();
+  };
+}
+
+// Inicjalizacja przy załadowaniu strony
+document.addEventListener('DOMContentLoaded', function() {
+  // Najpierw wczytaj zapisane dane
+  loadSessionData();
+  
+  // Następnie skonfiguruj automatyczne zapisywanie
+  setupAutoSave();
+});
+
+// Funkcja czyszcząca wszystkie pola
+function clearAllData() {
+    // Wyczyść nazwę produktu
+    document.getElementById('product-name').value = '';
+    resizeInput(document.getElementById('product-name'));
+    
+    // Wyczyść wszystkie sekcje
+    sectionsContainer.innerHTML = '';
+    
+    // Dodaj pustą sekcję, aby interfejs nie był pusty
+    createSection();
+    
+    // Wyczyść dane z localStorage
+    localStorage.removeItem(SESSION_STORAGE_KEY);
+    
+    // Aktualizuj podgląd i wygenerowany kod
+    updatePreviewAndCode();
+  }
+  
+  // Dodaj przycisk czyszczenia do interfejsu
+  function addClearButton() {
+    const clearButton = document.createElement('button');
+    clearButton.textContent = 'Wyczyść wszystko';
+    clearButton.id = 'clear-button';
+    clearButton.onclick = clearAllData;
+    clearButton.style.marginLeft = "10px";
+    
+    // Możesz dodać przycisk w dowolne miejsce w interfejsie
+    // Na przykład, obok przycisku "Dodaj sekcję"
+    document.getElementById('add-section').insertAdjacentElement('afterend', clearButton);
+  }
+  
+  // Wywołaj tę funkcję podczas inicjalizacji
+  document.addEventListener('DOMContentLoaded', function() {
+    // Najpierw wczytaj zapisane dane
+    loadSessionData();
+    
+    // Następnie skonfiguruj automatyczne zapisywanie
+    setupAutoSave();
+    
+    // Dodaj przycisk czyszczenia
+    addClearButton();
+  });
