@@ -156,7 +156,7 @@ const iconsList = [
   { name: "prostownica", path: "https://vobis.pl/Shared/Icon/Ikony_prostownica.png" },
   { name: "rower", path: "https://vobis.pl/Shared/Icon/Ikony_rower.png" },
   { name: "saturator", path: "https://vobis.pl/Shared/Icon/Ikony_saturator.png" },
-  { name: "smartwatch", path: "https://vobis.pl/Shared/Icon/Ikony_smartwatch.png" },
+  { name: "smartwatch2", path: "https://vobis.pl/Shared/Icon/Ikony_smartwatch.png" },
   { name: "SOS", path: "https://vobis.pl/Shared/Icon/Ikony_SOS.png" },
   { name: "telefon", path: "https://vobis.pl/Shared/Icon/Ikony_telefon.png" },
   { name: "odkurzacz_pionowy", path: "https://vobis.pl/Shared/Icon/ikony_odkurzacz_pionowy.png" },
