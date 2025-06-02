@@ -374,12 +374,12 @@ function updateCode() {
         if (iconUrl) {
             code += `    \n<div class="customDescription-col-1-6">\n<img src="${iconUrl}" alt="Ikona" class="customDescription-icon">\n</div>\n`;
         }
-        code += `    <div class="customDescription-col-5-6">\n<h3>${title}</h3>\n<p>${text}</p>\n<p>&nbsp;</p>\n`;
+        code += `    <div class="customDescription-col-5-6">\n<h3>${title}</h3>\n<p>${text}</p>\n`;
 
         if (imageName) {
             code += `    <img src="https://vobis.pl/Products/Zdj%C4%99cia%20do%20kart/${imageName}.jpg" alt="${imageAlt}" class="customDescription-object-fit_c"></div>\n`;
         } else {
-            code += `</div>\n`;
+            code += `</div>\n<p>&nbsp;</p>`;
         }
         code += `</section>\n`;
     });
