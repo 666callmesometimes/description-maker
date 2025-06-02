@@ -377,9 +377,9 @@ function updateCode() {
         code += `    <div class="customDescription-col-5-6">\n<h3>${title}</h3>\n<p>${text}</p>\n`;
 
         if (imageName) {
-            code += `    <img src="https://vobis.pl/Products/Zdj%C4%99cia%20do%20kart/${imageName}.jpg" alt="${imageAlt}" class="customDescription-object-fit_c"></div>\n`;
+            code += `    <img src="https://vobis.pl/Products/Zdj%C4%99cia%20do%20kart/${imageName}.jpg" alt="${imageAlt}" class="customDescription-object-fit_c"></div><p>&nbsp;</p>\n`;
         } else {
-            code += `</div>\n<p>&nbsp;</p>`;
+            code += `</div>\n`;
         }
         code += `</section>\n`;
     });
