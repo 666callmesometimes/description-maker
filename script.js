@@ -316,8 +316,12 @@ function openImagePopup(button) {
     const currentUrl = button.getAttribute('data-url') || '';
     const currentAlt = button.getAttribute('data-alt') || '';
     
+    // Automatyczne uzupełnienie alt nazwą produktu jeśli pole jest puste
+    const productName = document.getElementById("product-name").value;
+    const altValue = currentAlt || productName;
+    
     document.getElementById('image-url').value = currentUrl;
-    document.getElementById('image-alt').value = currentAlt;
+    document.getElementById('image-alt').value = altValue;
 
     document.getElementById('save-image').onclick = function () {
         const imageName = document.getElementById('image-url').value;
@@ -333,6 +337,7 @@ function openImagePopup(button) {
             // Zachowaj dane obrazka jako atrybuty przycisku
             button.setAttribute('data-url', imageName);
             button.setAttribute('data-alt', imageAlt);
+            
         } else {
             // Usuń tło jeśli nie podano nazwy
             button.style.backgroundImage = '';
@@ -349,7 +354,6 @@ function openImagePopup(button) {
         popup.style.display = 'none';
     };
 }
-
 function updateCode() {
     const productName = document.getElementById("product-name").value;
     let code = `<div class="customDescription-column customDescription-editorContent">
