@@ -323,7 +323,7 @@ function openImagePopup(button) {
         const imageName = document.getElementById('image-url').value;
         const imageAlt = document.getElementById('image-alt').value;
 
-        if (imageName) {
+        if (imageName || imageAlt) {
             const imageUrl = 'https://vobis.pl/Products/Zdj%C4%99cia%20do%20kart/' + imageName + '.jpg';
             
             // Ustaw tło przycisku
