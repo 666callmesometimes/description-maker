@@ -196,14 +196,38 @@ function addSection(sectionData = null) {
     const section = document.createElement("div");
     section.classList.add("section");
     
-    // Domyślna ikona (jeśli nie ma zapisanej)
+    // Domyślna ikona
     const defaultIcon = {
         src: iconsList[0].path,
         alt: iconsList[0].name
     };
     
-    // Ikona z zapisanych danych lub domyślna
-    const icon = sectionData && sectionData.icon ? sectionData.icon : defaultIcon;
+    // Wybierz odpowiednią ikonę
+    let icon = defaultIcon;
+    if (sectionData && sectionData.icon) {
+        if (sectionData.icon.name) {
+            // Najpierw spróbuj znaleźć po nazwie
+            const foundIcon = iconsList.find(i => i.name === sectionData.icon.name);
+            if (foundIcon) {
+                icon = { src: foundIcon.path, alt: foundIcon.name };
+            } else if (sectionData.icon.path) {
+                // Jeśli nie znaleziono po nazwie, spróbuj po ścieżce
+                const foundByPath = iconsList.find(i => i.path === sectionData.icon.path);
+                if (foundByPath) {
+                    icon = { src: foundByPath.path, alt: foundByPath.name };
+                } else {
+                    // Użyj bezpośrednio z importowanych danych
+                    icon = { src: sectionData.icon.path, alt: sectionData.icon.name || "" };
+                }
+            }
+        } else if (sectionData.icon.path) {
+            // Fallback: tylko ścieżka
+            icon = { src: sectionData.icon.path, alt: sectionData.icon.name || "" };
+        } else if (sectionData.icon.src) {
+            // Wsparcie dla starego formatu
+            icon = { src: sectionData.icon.src, alt: sectionData.icon.alt || "" };
+        }
+    }
     
     section.innerHTML = `
         <div class="section-icon" onclick="openIconPopup(this)">
@@ -236,6 +260,7 @@ function addSection(sectionData = null) {
     
     updateCode();
 }
+
 
 function adjustHeight(textarea) {
     textarea.style.height = 'auto'; // Ustawiamy wysokość na 'auto', aby zmniejszyć wysokość, jeśli tekst usuniemy
@@ -404,7 +429,10 @@ function saveToLocalStorage() {
     document.querySelectorAll(".section").forEach(section => {
         const iconImg = section.querySelector(".section-icon img");
         const sectionData = {
-            icon: iconImg ? { src: iconImg.src, alt: iconImg.alt } : null,
+            icon: iconImg ? { 
+                name: iconImg.alt, 
+                path: iconImg.src 
+            } : null,
             title: section.querySelector(".section-header").value,
             text: section.querySelector(".section-text").value,
             image: {
@@ -417,6 +445,7 @@ function saveToLocalStorage() {
     
     localStorage.setItem('productCardData', JSON.stringify(data));
 }
+
 
 // Funkcja wczytująca dane z localStorage
 function loadFromLocalStorage() {
@@ -529,28 +558,72 @@ function parseSectionFromHTML(sectionElement) {
         if (!iconElement) {
             iconElement = sectionElement.querySelector('img[alt*="Ikona"]');
         }
+        if (!iconElement) {
+            // Znajdź ikonę na podstawie URL zawierającego '/Shared/Icon/'
+            const allImages = sectionElement.querySelectorAll('img');
+            for (let img of allImages) {
+                if (img.src.includes('/Shared/Icon/')) {
+                    iconElement = img;
+                    break;
+                }
+            }
+        }
         
         if (iconElement) {
             const iconSrc = iconElement.src;
-            // Znajdź odpowiadającą ikonę w naszej liście
-            const matchingIcon = iconsList.find(icon => icon.path === iconSrc);
+            // Znajdź odpowiadającą ikonę w naszej liście na podstawie pełnego URL
+            let matchingIcon = iconsList.find(icon => icon.path === iconSrc);
+            
+            if (!matchingIcon) {
+                // Jeśli nie znaleziono dokładnego dopasowania, spróbuj dopasować po nazwie pliku
+                const iconFileName = iconSrc.split('/').pop();
+                matchingIcon = iconsList.find(icon => {
+                    const iconFileNameFromList = icon.path.split('/').pop();
+                    return iconFileNameFromList === iconFileName;
+                });
+            }
+            
+            if (!matchingIcon) {
+                // Jeśli nadal nie znaleziono, spróbuj dopasować po nazwie ikony
+                const iconName = iconSrc.split('/').pop().replace('.png', '');
+                matchingIcon = iconsList.find(icon => icon.name === iconName);
+            }
+            
+            if (!matchingIcon) {
+                // Dekoduj URL i spróbuj ponownie
+                try {
+                    const decodedSrc = decodeURIComponent(iconSrc);
+                    matchingIcon = iconsList.find(icon => icon.path === decodedSrc);
+                    
+                    if (!matchingIcon) {
+                        const decodedFileName = decodedSrc.split('/').pop();
+                        matchingIcon = iconsList.find(icon => {
+                            const iconFileNameFromList = icon.path.split('/').pop();
+                            return iconFileNameFromList === decodedFileName;
+                        });
+                    }
+                } catch (e) {
+                    console.warn('Błąd dekodowania URL ikony:', e);
+                }
+            }
+            
             if (matchingIcon) {
                 sectionData.icon = {
-                    src: matchingIcon.path,
-                    alt: matchingIcon.name
+                    name: matchingIcon.name,
+                    path: matchingIcon.path
                 };
             } else {
-                // Użyj pierwszej ikony jako domyślnej
+                // Jeśli nie znaleziono dopasowania, zachowaj oryginalną ikonę
                 sectionData.icon = {
-                    src: iconsList[0].path,
-                    alt: iconsList[0].name
+                    name: iconElement.alt || 'unknown',
+                    path: iconSrc
                 };
             }
         } else {
             // Jeśli nie ma ikony, użyj domyślnej
             sectionData.icon = {
-                src: iconsList[0].path,
-                alt: iconsList[0].name
+                name: iconsList[0].name,
+                path: iconsList[0].path
             };
         }
         
@@ -653,8 +726,8 @@ function parseSectionFromHTML(sectionElement) {
         // Zwróć przynajmniej podstawową strukturę z domyślną ikoną
         return {
             icon: {
-                src: iconsList[0].path,
-                alt: iconsList[0].name
+                name: iconsList[0].name,
+                path: iconsList[0].path
             },
             title: '',
             text: '',
@@ -665,6 +738,7 @@ function parseSectionFromHTML(sectionElement) {
         };
     }
 }
+
 
 function importProductCard() {
     const importCode = document.getElementById('import-code').value.trim();
