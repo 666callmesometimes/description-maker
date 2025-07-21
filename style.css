@@ -219,18 +219,20 @@ input:-webkit-autofill {
 #close-icon-popup, #close-image-popup {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 4px;
     background-color: #00000000;
     color: black;
     border: none;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
+    width: 20px;
+    height: 20px;
+    line-height: 2+0px;
     text-align: center;
     cursor: pointer;
     font-weight: bold;
     padding: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNhYWFhYWEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS14LWljb24gbHVjaWRlLXgiPjxwYXRoIGQ9Ik0xOCA2IDYgMTgiLz48cGF0aCBkPSJtNiA2IDEyIDEyIi8+PC9zdmc+");
+    background-size: contain;
 }
 .addSectionBtn{
     border: 1px solid black;
