@@ -189,16 +189,16 @@ const iconsList = [
   { name: "mikrofon", path: "https://vobis.pl/Shared/Icon/Ikony_mikrofon.png" },
   { name: "glosnik2", path: "https://vobis.pl/Shared/Icon/Ikony_glosnik_2.png" },
   { name: "glosnik bezprzewodowy2", path: "https://vobis.pl/Shared/Icon/Ikony_glosnik_bezprzewodowy_2.png" },
-  { name: "cash1", path: "https://vobis.pl/Shared/Icon/cash1.png" },
-  { name: "cash2", path: "https://vobis.pl/Shared/Icon/cash2.png" },
-  { name: "celownik", path: "https://vobis.pl/Shared/Icon/celownik.png" },    
-  { name: "kobieta", path: "https://vobis.pl/Shared/Icon/kobieta.png" },
-  { name: "krokodyl", path: "https://vobis.pl/Shared/Icon/krokodyl.png" },
-  { name: "palma", path: "https://vobis.pl/Shared/Icon/palma.png" },
-  { name: "kufel", path: "https://vobis.pl/Shared/Icon/kufel.png" },
-  { name: "ps5", path: "https://vobis.pl/Shared/Icon/ps5.png" },
-  { name: "samochod", path: "https://vobis.pl/Shared/Icon/samochod.png" },
-  { name: "xbox", path: "https://vobis.pl/Shared/Icon/xbox.png" }
+  { name: "cash1", path: "https://vobis.pl/Shared/Icon/cash1.jpg" },
+  { name: "cash2", path: "https://vobis.pl/Shared/Icon/cash2.jpg" },
+  { name: "celownik", path: "https://vobis.pl/Shared/Icon/celownik.jpg" },    
+  { name: "kobieta", path: "https://vobis.pl/Shared/Icon/kobieta.jpg" },
+  { name: "krokodyl", path: "https://vobis.pl/Shared/Icon/krokodyl.jpg" },
+  { name: "palma", path: "https://vobis.pl/Shared/Icon/palma.jpg" },
+  { name: "kufel", path: "https://vobis.pl/Shared/Icon/kufel.jpg" },
+  { name: "ps5", path: "https://vobis.pl/Shared/Icon/ps5.jpg" },
+  { name: "samochod", path: "https://vobis.pl/Shared/Icon/samochod.jpg" },
+  { name: "xbox", path: "https://vobis.pl/Shared/Icon/xbox.jpg" }
 ];
 
 
